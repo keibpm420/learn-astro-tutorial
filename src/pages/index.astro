@@ -1,0 +1,18 @@
+---
+import Greeting from '../components/Greeting';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'トップページ';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h2 class="top-title">私の素晴らしいブログのサブタイトル</h2>
+    <Greeting client:load messages={['どうも', 'こんにちは', '初めまして', 'ようこそ']} />
+</BaseLayout>
+
+<style>
+    .top-title {
+        color: crimson;
+        font-weight: bold;
+        font-size: 20px;
+    }
+</style>
